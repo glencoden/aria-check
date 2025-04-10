@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Choice with Navigation</title>
+  </head>
+  <body>
+    <h1>Multiple Choice Examples</h1>
+
+    <fieldset>
+      <legend>What's your favorite season? (Single choice)</legend>
+      <div aria-describedby="season-desc season-nav-notice">
+        <div id="season-desc" class="visually-hidden">
+          Select one season or specify your own
+        </div>
+        <div id="season-nav-notice" class="visually-hidden">
+          Selecting an option will navigate to a new page
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="spring"
+            name="season"
+            value="spring"
+            aria-description="Selecting this will take you to the Spring details page"
+          />
+          <label for="spring">Spring</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="summer"
+            name="season"
+            value="summer"
+            aria-description="Selecting this will take you to the Summer details page"
+          />
+          <label for="summer">Summer</label>
+        </div>
+        <div>
+          <input type="radio" id="autumn" name="season" value="autumn" />
+          <label for="autumn">Autumn</label>
+        </div>
+        <div>
+          <input type="radio" id="other-season" name="season" value="other" />
+          <label for="other-season">Other:</label>
+          <input
+            type="text"
+            id="other-season-input"
+            name="other-season-input"
+            aria-label="Specify another season"
+            aria-describedby="other-season-help"
+          />
+          <div id="other-season-help" class="visually-hidden">
+            You can type your own season here
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Which fruits do you like? (Multiple choice)</legend>
+      <div aria-describedby="fruit-desc">
+        <div id="fruit-desc" class="visually-hidden">
+          Select one or more fruits or specify your own
+        </div>
+
+        <div>
+          <input type="checkbox" id="apple" name="apple" />
+          <label for="apple">Apples</label>
+        </div>
+        <div>
+          <input type="checkbox" id="banana" name="banana" />
+          <label for="banana">Bananas</label>
+        </div>
+        <div>
+          <input type="checkbox" id="orange" name="orange" />
+          <label for="orange">Oranges</label>
+        </div>
+        <div>
+          <input type="checkbox" id="mango" name="mango" />
+          <label for="mango">Mangos</label>
+        </div>
+        <div>
+          <input type="checkbox" id="other-fruit" name="other-fruit" />
+          <label for="other-fruit">Other fruit:</label>
+          <input
+            type="text"
+            id="other-fruit-input"
+            name="other-fruit-input"
+            aria-label="Specify another fruit"
+            aria-describedby="other-fruit-help"
+          />
+          <div id="other-fruit-help" class="visually-hidden">
+            You can type your own fruit here
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <style>
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+      }
+    </style>
+
+    <div
+      id="navigation-announcement"
+      role="status"
+      aria-live="assertive"
+      class="visually-hidden"
+    ></div>
+  </body>
+</html>
