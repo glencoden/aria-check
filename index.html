@@ -11,10 +11,8 @@
     <fieldset>
       <legend>What's your favorite season? (Single choice)</legend>
       <div aria-describedby="season-desc season-nav-notice">
-        <div id="season-desc" class="visually-hidden">
-          Select one season or specify your own
-        </div>
-        <div id="season-nav-notice" class="visually-hidden">
+        <div hidden id="season-desc">Select one season or specify your own</div>
+        <div hidden id="season-nav-notice">
           Selecting an option will navigate to a new page
         </div>
 
@@ -52,7 +50,7 @@
             aria-label="Specify another season"
             aria-describedby="other-season-help"
           />
-          <div id="other-season-help" class="visually-hidden">
+          <div hidden id="other-season-help">
             You can type your own season here
           </div>
         </div>
@@ -62,7 +60,7 @@
     <fieldset>
       <legend>Which fruits do you like? (Multiple choice)</legend>
       <div aria-describedby="fruit-desc">
-        <div id="fruit-desc" class="visually-hidden">
+        <div hidden id="fruit-desc">
           Select one or more fruits or specify your own
         </div>
 
@@ -92,31 +90,11 @@
             aria-label="Specify another fruit"
             aria-describedby="other-fruit-help"
           />
-          <div id="other-fruit-help" class="visually-hidden">
+          <div hidden id="other-fruit-help">
             You can type your own fruit here
           </div>
         </div>
       </div>
     </fieldset>
-
-    <style>
-      .visually-hidden {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-      }
-    </style>
-
-    <div
-      id="navigation-announcement"
-      role="status"
-      aria-live="assertive"
-      class="visually-hidden"
-    ></div>
   </body>
 </html>
